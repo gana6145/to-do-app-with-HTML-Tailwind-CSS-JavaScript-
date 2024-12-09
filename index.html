@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div>
+    <h1>to do app</h1>
+  
+      <input type="text" id="input" placeholder="enter to do">
+      <button onclick="addtask()">add</button>
+      <ul id="list">
+
+      </ul>
+    
+  </div>
+  <script>
+    let input=document.getElementById("input");
+    let list = document.getElementById('list');
+
+    function addtask(){
+      if(input.value === ''){
+        alert("please enter to do");
+
+      }
+      else{
+        let li=document.createElement('li');
+        li.innerHTML=input.value;
+        list.appendChild(li);
+      }
+      input.value="";
+    }
+  </script>
+</body>
+</html>
